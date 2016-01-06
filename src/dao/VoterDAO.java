@@ -14,16 +14,11 @@ public interface VoterDAO {
 
     /**
      * 修改投票人信息
-     * @param voter 投票人信息
+     * @param
      */
-    //public void updateVoter(Voter voter);
+    public void updateVoter(String username, String newPassword);
 
-    /**
-     * 查找投票人
-     * @param username
-     * @return 一个投票人对象
-     */
-     //public Voter findByName(String username);
+
 
     /**
      * 删除投票人

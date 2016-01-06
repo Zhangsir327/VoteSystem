@@ -53,34 +53,37 @@ public class VoterDAOImpl implements VoterDAO {
      * 修改投票人
      * @param voter 投票人信息
      */
-//    @Override
-//    public void updateVoter(Voter voter) {
-//        Session session=HibernateUtil.openSession();
-//        Transaction transaction=session.beginTransaction();
-//        try{
-//            session.update(voter);
-//            transaction.commit();
-//        }catch(Exception e){
-//            e.printStackTrace();
-//            if (transaction!=null){
-//                transaction.rollback();
-//            }
-//        }finally {
-//            HibernateUtil.closeSession(session);
-//        }
-//    }
+    @Override
+    public void updateVoter(String username, String newPassword) {
+        Session session=HibernateUtil.openSession();
+        Transaction transaction=session.beginTransaction();
+        try{
+            Voter voter=(Voter)session.load(Voter.class,1);
+            voter.setPassword(newPassword);
+            session.update(voter);
+            transaction.commit();
+        }catch(Exception e){
+            e.printStackTrace();
+            if (transaction!=null){
+                transaction.rollback();
+            }
+        }finally {
+            HibernateUtil.closeSession(session);
+        }
+    }
 
-    /**
-     * 查找投票人
-     * @param username
-     * @return Voter对象
-     */
+//    /**
+//     * 查找投票人
+//     * @param username
+//     * @return Voter对象
+//     */
 //    @Override
 //    public Voter findByName(String username) {
 //        Session session=HibernateUtil.openSession();
 //        Transaction transaction=session.beginTransaction();
+//        Voter voter=null;
 //        try{
-//            Voter voter=(Voter)session.load(Voter.class,username);
+//            voter=(Voter)session.load(Voter.class,1);
 //            transaction.commit();
 //        }catch(Exception e){
 //            e.printStackTrace();
@@ -90,5 +93,6 @@ public class VoterDAOImpl implements VoterDAO {
 //        }finally {
 //            HibernateUtil.closeSession(session);
 //        }
+//        return voter;
 //    }
 }

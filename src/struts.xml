@@ -6,15 +6,15 @@
 
 <struts>
     <package name="struts2" extends="struts-default">
-        <interceptors>
-            <interceptor name="sessionInterceptor" class="interceptor.SessionInterceptor">
-            </interceptor>
-            <interceptor-stack name="myInterceptorStack">
-                <interceptor-ref name="defaultStack"/>
-                <interceptor-ref name="sessionInterceptor"/>
-            </interceptor-stack>
-        </interceptors>
-        <default-interceptor-ref name="myInterceptorStack"/>
+        <!--<interceptors>-->
+            <!--<interceptor name="sessionInterceptor" class="interceptor.SessionInterceptor">-->
+            <!--</interceptor>-->
+            <!--<interceptor-stack name="myInterceptorStack">-->
+                <!--<interceptor-ref name="defaultStack"/>-->
+                <!--<interceptor-ref name="sessionInterceptor"/>-->
+            <!--</interceptor-stack>-->
+        <!--</interceptors>-->
+        <!--<default-interceptor-ref name="myInterceptorStack"/>-->
         <global-results>
             <result name="login">/pages/login.jsp</result>
         </global-results>

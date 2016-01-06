@@ -7,6 +7,7 @@ import dbservice.VoterServiceImpl;
 
 /**
  * Created by zhangsirui on 15/12/29.
+ * 注册用户
  */
 public class AddAction extends ActionSupport{
     private String username;

@@ -33,7 +33,7 @@ public class VoterServiceImpl implements VoterService {
 //    @Override
 //    public Voter readVoter(String username) {
 //        VoterDAO voterDAO=new VoterDAOImpl();
-//        Voter voter=voterDAO.readVoter(username);
+//        Voter voter=voterDAO.findByName(username);
 //        return voter;
 //    }
 }

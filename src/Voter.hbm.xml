@@ -8,6 +8,7 @@
         </id>
         <property name="username" column="username" type="string"/>
         <property name="password" column="password" type="string"/>
+        <property name="vote" column="vote" type="string"/>
     </class>
 
 </hibernate-mapping>

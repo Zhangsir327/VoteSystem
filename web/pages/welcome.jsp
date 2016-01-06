@@ -12,6 +12,6 @@
 </head>
 <body>
 welcome
-
+<a href="update.jsp">修改信息</a>
 </body>
 </html>
